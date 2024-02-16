@@ -1,0 +1,13 @@
+
+.main {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 960px;
+    height: 960px;
+    border: 32px solid grey;
+}
+
+.square {
+    background-color: hotpink;
+    border: 0.96px solid black;
+}
