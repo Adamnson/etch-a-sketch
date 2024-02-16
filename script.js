@@ -9,6 +9,7 @@ let sideLength = boxWidth/numberOfSquares - (.96*2);
 // CONSOLE LOGS
 console.log(sideLength);
 
+
 //$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##
 // loop to create a line elment and add squares to the line
 // followed by adding line to the '.main' element
@@ -35,4 +36,8 @@ main.addEventListener('mousemove', (e) => {
     log.innerText = `
     Screen X/Y: (${e.screenX}, ${e.screenY})
     Client X/Y: (${e.clientX}, ${e.clientY})`
+    const elementMouseIsOver = document.elementFromPoint(e.clientX, e.clientY);
+    console.log(elementMouseIsOver);
+    elementMouseIsOver.style.backgroundColor = 'red';
 });
+
