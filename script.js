@@ -3,20 +3,19 @@
 const box = document.querySelector(".box");
 const BOX_WIDTH = 960;
 const ELEMENT_BORDER_WIDTH = 0.96;
-let numberOfSquares = document.getElementById('square-number').value;
+// let numberOfSquares = document.getElementById('square-number').value;
 // let numberOfSquares = 45;
-let sideLength = BOX_WIDTH/numberOfSquares - (ELEMENT_BORDER_WIDTH*2);
+// let sideLength = BOX_WIDTH/numberOfSquares - (ELEMENT_BORDER_WIDTH*2);
 
 //$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##
 // CONSOLE LOGS
-console.log(sideLength);
-console.log(numberOfSquares);
+// console.log(sideLength);
+// console.log(numberOfSquares);
 
 
 //$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##$$##
 function gridElementUpdate(){
-    let new_n = document.querySelector('#square-number').value;
-    numberOfSquares = new_n;
+    let numberOfSquares = document.querySelector('#square-number').value;
     sideLength = BOX_WIDTH/numberOfSquares - (ELEMENT_BORDER_WIDTH*2);
     clearGrid();
     drawGrid(numberOfSquares);
@@ -61,4 +60,4 @@ box.addEventListener('mousemove', (e) => {
     elementMouseIsOver.style.backgroundColor = 'red';
 });
 
-drawGrid(42);
+gridElementUpdate(); //first call to load the grid on the page
