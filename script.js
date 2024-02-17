@@ -64,11 +64,15 @@ box.addEventListener('mousemove', (e) => {
     Client X/Y: (${e.clientX}, ${e.clientY})`
     const elementMouseIsOver = document.elementFromPoint(e.clientX, e.clientY);
     const isColorful = document.querySelector('#colorful').checked;
+    // const shouldDarken = document.querySelector('#darken').checked;   #underDev
     // console.log(isColorful);          //#debug
     // console.log(elementMouseIsOver);  //#debug
     isColorful?
     elementMouseIsOver.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16):
-    elementMouseIsOver.style.backgroundColor = 'red';
+    elementMouseIsOver.style.backgroundColor = '#400080';
+    // (shouldDarken && elementMouseIsOver.className==='square')?         #underDev
+    // elementMouseIsOver.style.opacity += 0.1:                    
+    // elementMouseIsOver.style,opacity = 1;
 });
 /**********************************************************************
  * function calls
