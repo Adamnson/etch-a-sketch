@@ -1,5 +1,9 @@
-
 .main {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
     display: flex;
     flex-wrap: nowrap;
     width: 960px;
@@ -10,4 +14,11 @@
 .square {
     background-color: yellow;
     border: 0.96px solid black;
+}
+
+#log {
+    margin-left: 25px;
+}
+.controls {
+    /* display: flex; */
 }
